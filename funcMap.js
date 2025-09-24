@@ -52,9 +52,7 @@ return the results array
 var map = function(arr, fn) {
     let finalArr = [];
     for (let i = 0; i < arr.length; i++){
-        for (let j = 0; j < 1; j++){
-            finalArr.push(fn(arr[i], i));
-        }
+        finalArr.push(fn(arr[i], i));
     }
     return finalArr;
 };
