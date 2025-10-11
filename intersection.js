@@ -39,6 +39,8 @@ if i = j;
 push.result()
 return result
 */
+
+/*
 var intersection = function(nums1, nums2) {
     let result = [];
     
@@ -50,6 +52,33 @@ var intersection = function(nums1, nums2) {
                 }
                 break;
             }
+        }
+    }
+    
+    return result;
+};
+*/
+
+
+/*
+Function intersection with nums1,nums2 parameters
+Convert nums1 to Set (removes duplicates from nums1)
+Convert nums2 to Set (removes duplicates from nums2)
+Create empty result array
+Loop through each unique number in set1
+ If that number exists in set2:
+    Add to result
+Return result
+*/
+
+var intersection = function(nums1, nums2) {
+    let set1 = new Set(nums1);
+    let set2 = new Set(nums2);
+    let result = [];
+    
+    for (let num of set1) {
+        if (set2.has(num)) {
+            result.push(num);
         }
     }
     
